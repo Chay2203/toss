@@ -1,0 +1,1 @@
+{"name":"coin-toss","version":"1.0.0","private":true,"type":"module","description":"A tiny coin toss app used to demonstrate DevOps","scripts":{"start":"node app/server.mjs","test":"node --test tests/*.test.mjs","check":"node --check app/server.mjs && node --check public/app.js"},"engines":{"node":">=22"}}
