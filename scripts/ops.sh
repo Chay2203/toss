@@ -1,14 +1,15 @@
 #!/usr/bin/env bash
 source "$(dirname "$0")/common.sh"
+logs(){ for pod in $(k get pods -l app=coin-toss --field-selector=status.phase=Running -o jsonpath='{.items[*].metadata.name}'); do k logs "$pod" --tail=200; done; }
 case "${1:-status}" in
  status) k get deployment,pods,service -o wide ;;
- logs) k logs -l app=coin-toss --tail=200 ;;
+ logs) logs ;;
  rollback) k rollout undo deployment/coin-toss; k rollout status deployment/coin-toss --timeout=120s ;;
  evidence)
   node scripts/verify.mjs
   dir=$(ls -dt evidence/runs/*/ | head -1)
   k get deployment,pod,service -o json > "$dir/runtime.json"
-  k logs -l app=coin-toss --tail=200 > "$dir/logs.jsonl"
+  logs > "$dir/logs.jsonl"
   node scripts/check-trace.mjs "$dir"
   ;;
  fault)
