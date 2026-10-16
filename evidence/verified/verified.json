@@ -1,0 +1,14 @@
+{
+  "source": "814dd8f8ab76d9e148a6913477c32d8a65bff991",
+  "checks": [
+    "50 successful tosses",
+    "exact running source version",
+    "p95 below 500ms",
+    "two ready Kubernetes replicas",
+    "runtime image IDs recorded",
+    "request log correlated",
+    "HTTP and coin-flip spans correlated",
+    "metrics captured"
+  ],
+  "status": "passed"
+}

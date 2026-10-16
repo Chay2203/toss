@@ -1,0 +1,22 @@
+TAP version 13
+# Subtest: coin toss user journey, version and correlated request spans
+ok 1 - coin toss user journey, version and correlated request spans
+  ---
+  duration_ms: 123.046583
+  type: 'test'
+  ...
+# Subtest: health, HTTP boundaries, browser security and request metrics
+ok 2 - health, HTTP boundaries, browser security and request metrics
+  ---
+  duration_ms: 13.143583
+  type: 'test'
+  ...
+1..2
+# tests 2
+# suites 0
+# pass 2
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 215.254708
