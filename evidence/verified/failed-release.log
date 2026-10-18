@@ -1,0 +1,21 @@
+deployment.apps/coin-toss image updated
+Waiting for deployment "coin-toss" rollout to finish: 1 out of 2 new replicas have been updated...
+error: timed out waiting for the condition
+{
+  "time": "2026-10-18T07:24:44.541Z",
+  "source": "ba8a0afde33c02770b5b3480759fa91eec199780",
+  "version": "ba8a0afde33c02770b5b3480759fa91eec199780",
+  "successfulTosses": 50,
+  "results": {
+    "Heads": 16,
+    "Tails": 34
+  },
+  "p95Ms": 3.06,
+  "traceId": "57681db832ca3af84f6a481c3cd97304",
+  "status": "passed",
+  "limitation": "Short local exercise; not a long-term SLA or proof of exact 50/50 distribution"
+}
+Evidence directory: evidence/runs/2026-10-18T07-24-44.537Z
+deployment.apps/coin-toss rolled back
+deployment "coin-toss" successfully rolled out
+Bad release rejected; original ready replicas remained available. Run evidence again.

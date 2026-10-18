@@ -1,0 +1,4 @@
+NAME                         READY   STATUS             RESTARTS   AGE   IP           NODE                      NOMINATED NODE   READINESS GATES
+coin-toss-6b98b775d4-5wdl2   1/1     Running            0          62s   10.244.0.5   coin-toss-control-plane   <none>           <none>
+coin-toss-6b98b775d4-dnprt   1/1     Running            0          62s   10.244.0.6   coin-toss-control-plane   <none>           <none>
+coin-toss-6f65789949-mbkjw   0/1     ImagePullBackOff   0          20s   10.244.0.7   coin-toss-control-plane   <none>           <none>

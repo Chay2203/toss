@@ -10,6 +10,8 @@ Show app/server.mjs and public/app.js. Do not claim a finite sequence must conta
 
 “Docker packages the same app and Node runtime. A Deployment maintains two identical pods. A ClusterIP Service gives them one stable network address and routes to ready pods. The ConfigMap holds ordinary environment settings. The pod needs no Secret because this app has no credentials.”
 
+Linux detail: containers share the host kernel; namespaces isolate processes/network and cgroups enforce CPU/memory limits. The numeric user and dropped capabilities restrict process privileges. Service DNS/IP stay stable as pod IPs change. Local kind avoids paid infrastructure; a public cloud deployment would additionally need ingress/TLS, durable operations and an access model.
+
 Show k8s/app.yaml. Startup gives the app time to initialize. Readiness controls traffic; liveness restarts an unresponsive process. Requests reserve scheduling resources; limits bound consumption. Deployment is suitable for replaceable stateless pods. No StatefulSet/PVC is needed. Two pods on one kind node are not protection against node failure.
 
 ## 3. How does a code change reach users?

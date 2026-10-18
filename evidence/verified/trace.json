@@ -1,0 +1,31 @@
+[
+  {
+    "time": "2026-10-18T07:26:11.429Z",
+    "version": "814dd8f8ab76d9e148a6913477c32d8a65bff991",
+    "event": "span",
+    "name": "coin.flip",
+    "trace_id": "357cea30de917a73e73ada2628f1fa77",
+    "span_id": "05502fb78f234d3d",
+    "parent_span_id": "11f05311915a4b4e",
+    "duration_ms": 0.005874999998923158
+  },
+  {
+    "time": "2026-10-18T07:26:11.429Z",
+    "version": "814dd8f8ab76d9e148a6913477c32d8a65bff991",
+    "event": "request",
+    "route": "/api/toss",
+    "status": 200,
+    "duration_ms": 0.11,
+    "trace_id": "357cea30de917a73e73ada2628f1fa77"
+  },
+  {
+    "time": "2026-10-18T07:26:11.429Z",
+    "version": "814dd8f8ab76d9e148a6913477c32d8a65bff991",
+    "event": "span",
+    "name": "http.request",
+    "trace_id": "357cea30de917a73e73ada2628f1fa77",
+    "span_id": "11f05311915a4b4e",
+    "parent_span_id": null,
+    "duration_ms": 0.11137500000040745
+  }
+]
