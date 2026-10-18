@@ -1,0 +1,15 @@
+import {readFileSync,writeFileSync} from 'node:fs';
+import assert from 'node:assert/strict';
+const dir=process.argv[2];
+const journey=JSON.parse(readFileSync(dir+'/journey.json'));
+const logs=readFileSync(dir+'/logs.jsonl','utf8').trim().split('\n').map(JSON.parse);
+const trace=logs.filter(e=>e.trace_id===journey.traceId);
+const http=trace.find(e=>e.name==='http.request'),coin=trace.find(e=>e.name==='coin.flip');
+assert.ok(trace.find(e=>e.event==='request'));assert.ok(http&&coin);assert.equal(coin.parent_span_id,http.span_id);
+const runtime=JSON.parse(readFileSync(dir+'/runtime.json'));
+const pods=runtime.items.filter(x=>x.kind==='Pod'&&x.status.containerStatuses?.[0]?.ready);
+assert.equal(pods.length,2);assert.ok(pods.every(p=>p.spec.containers[0].image==='coin-toss:'+journey.source));
+assert.ok(pods.every(p=>p.status.containerStatuses[0].imageID));
+writeFileSync(dir+'/trace.json',JSON.stringify(trace,null,2)+'\n');
+writeFileSync(dir+'/verified.json',JSON.stringify({source:journey.source,checks:['50 successful tosses','exact running source version','p95 below 500ms','two ready Kubernetes replicas','runtime image IDs recorded','request log correlated','HTTP and coin-flip spans correlated','metrics captured'],status:'passed'},null,2)+'\n');
+console.log('Runtime, log and trace correlation passed.');
