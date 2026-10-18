@@ -1,0 +1,18 @@
+# TYPE coin_toss_http_requests_total counter
+coin_toss_http_requests_total{route="/version",status="200"} 1
+coin_toss_http_requests_total{route="/api/toss",status="200"} 50
+# TYPE coin_toss_results_total counter
+coin_toss_results_total{result="Heads"} 31
+coin_toss_results_total{result="Tails"} 19
+# TYPE coin_toss_http_duration_seconds histogram
+coin_toss_http_duration_seconds_bucket{le="0.005"} 51
+coin_toss_http_duration_seconds_bucket{le="0.01"} 51
+coin_toss_http_duration_seconds_bucket{le="0.025"} 51
+coin_toss_http_duration_seconds_bucket{le="0.05"} 51
+coin_toss_http_duration_seconds_bucket{le="0.1"} 51
+coin_toss_http_duration_seconds_bucket{le="0.25"} 51
+coin_toss_http_duration_seconds_bucket{le="0.5"} 51
+coin_toss_http_duration_seconds_bucket{le="1"} 51
+coin_toss_http_duration_seconds_bucket{le="+Inf"} 51
+coin_toss_http_duration_seconds_count 51
+coin_toss_http_duration_seconds_sum 0.00767708699998184

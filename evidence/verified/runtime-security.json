@@ -1,0 +1,11 @@
+{
+  "version": "ba8a0afde33c02770b5b3480759fa91eec199780",
+  "uid": 1000,
+  "rootReadOnly": true,
+  "serviceAccountTokenMounted": false,
+  "kernelControls": [
+    "CapEff:\t0000000000000000",
+    "NoNewPrivs:\t1",
+    "Seccomp:\t2"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "before": [
+    "14b19428-caf3-411c-9a8a-fd363662b90d",
+    "87928bf9-4736-4e02-9914-22c346574048"
+  ],
+  "after": [
+    "87928bf9-4736-4e02-9914-22c346574048",
+    "4e28231b-498b-42a9-8db0-cda94507e402"
+  ],
+  "twoReadyReplicas": true,
+  "podReplaced": true
+}
