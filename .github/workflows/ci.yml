@@ -2,7 +2,7 @@ name: Test, build, scan and deploy
 on:
   pull_request:
   push:
-    branches: [main, devops/final-project]
+    branches: [main, devorps]
   workflow_dispatch:
 permissions: {contents: read}
 jobs:

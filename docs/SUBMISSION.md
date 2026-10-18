@@ -5,7 +5,7 @@
 - Project: Coin Toss, a small stateless application operated on local Kubernetes.
 - Repository URL: **fill after push**.
 - Exact baseline: `6006ea7e8022fa8b8bb4d57e0bc0be1432e227fd`.
-- Improvement branch: `devops/final-project`.
+- Improvement branch: `devorps`.
 - One PR URL: **fill after creating it**.
 - Exact final SHA: get with `git rev-parse HEAD` after your last change.
 - Hosted CI run URL: **add the genuine run after push**.
@@ -22,10 +22,10 @@ Create an empty GitHub repository, then from this project:
 git remote add origin <your-repository-url>
 git push -u origin main
 git push origin baseline
-git push -u origin devops/final-project
+git push -u origin devorps
 ```
 
-Open one PR from devops/final-project into main. Do not move main to the finished version first; the PR should compare the baseline with all improvements. Multiple improvement commits are fine. Preserve history and grant reviewer access. GitHub work is intentionally not done yet.
+Open one PR from devorps into main. Do not move main to the finished version first; the PR should compare the baseline with all improvements. Multiple improvement commits are fine. Preserve history and grant reviewer access. GitHub work is intentionally not done yet.
 
 Suggested PR summary: “Add a container, repeatable local Kubernetes deployment, health probes, rolling releases and rollback, CI tests/scans/deployment, simple metrics/logs/request traces, and actual operating evidence to the original Coin Toss app.”
 
